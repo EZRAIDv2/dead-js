@@ -1,0 +1,67 @@
+#!/usr/bin/python3
+import os
+from colorama import Fore as color
+from random import randint as rr, choice as rc
+
+def cls():
+    os.system('clear || cls || :')
+def random_name(length = 5):
+    ascii = ['0', '1', '2', '3', '4', '5', '6']
+    retr_ = ''
+    for x in range(length):
+        retr_ = retr_ + (rc(ascii))
+    return retr_
+
+
+cls()
+VERSION = '1.0.0'
+MENU = f'''
+{color.LIGHTCYAN_EX}o.OOOo.                     o         OooOoo .oOOOo.  
+ O    `o                   O              O  o     o  
+ o      O                  o              o  O.       
+ O      o                  o              O   `OOoo.  
+ o      O .oOo. .oOoO' .oOoO              o        `O 
+ O      o OooO' O   o  o   O              O         o 
+ o    .O' O     o   O  O   o        O     o  O.    .O 
+ OooOO'   `OoO' `OoO'o `OoO'o       `OooOO'   `oooO'{color.RESET}
+ 
+                                                {color.RED}Dead {color.YELLOW}JS {color.BLUE}EZRAIDv2
+                                            {color.GREEN}v{VERSION}{color.RESET}
+'''
+print(MENU)
+print(f'{color.LIGHTCYAN_EX}Enter / paste your code here (type "__DONE__" to start obfuscation): {color.LIGHTGREEN_EX}')
+INPUT = ''
+CODE = []
+while INPUT != '__DONE__':
+    INPUT = input(f'{color.RESET}')
+    if INPUT != '__DONE__':
+        CODE.append(INPUT)
+    else:
+        break
+NULL = '{void(0)}'
+NULL = str(NULL)
+NAME = f'_0x{str(random_name())}'
+CODE_TO_APPEND_1 = f'function _0x{str(random_name())}(){NULL};'
+CODE_TO_APPEND_2 = f'var _0x{str(random_name())} = \'_N691,.2{str(random_name())}\';'
+CODE_TO_APPEND_3 = f'var $_{str(random_name())} = \'_d\%6\pFhC1{str(random_name())}\';'
+CODE_APPEND = ''
+CODE_APPEND = CODE_TO_APPEND_1
+for x in range(rr(12, 17)):
+    CHANCE = rr(1, 5)
+    CHANCE = str(CHANCE)
+    NAME = f'{str(random_name())}'
+    CLOSE = '}'
+    OPEN = '{'
+    CODE_TO_APPEND_1 = f"function _0x{NAME}(){OPEN}{NULL}{CLOSE};_0x{NAME}();"
+    CODE_TO_APPEND_2 = f"var _0x{NAME} = '_N691,.2{str(random_name())}';"
+    CODE_TO_APPEND_3 = f"var $_{NAME} = '_d\%6\pFhC1{str(random_name())}';"
+    if CHANCE == '2':
+        CODE_APPEND = CODE_APPEND + CODE_TO_APPEND_2
+    elif CHANCE == '3':
+        CODE_APPEND = CODE_APPEND + CODE_TO_APPEND_3
+    else:
+        CODE_APPEND = CODE_APPEND + CODE_TO_APPEND_1
+FINALCODE = str(CODE_APPEND) + ''.join(CODE) + ';' + str(CODE_APPEND)
+FINALCODE = str(FINALCODE)
+print(f'''{color.CYAN}Your code:{color.RESET}
+{color.LIGHTGREEN_EX}{FINALCODE}{color.RESET}''')
