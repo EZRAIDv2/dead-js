@@ -10,4 +10,4 @@ Run this in command line:
 ## How to run
 Run this in command lne:
 <br>
-```clear && echo "Running..." && wait && clear && cd dead-js-main && python3 dead_js``
+```clear && echo "Running..." && wait && clear && cd dead-js-main && python3 dead_js ```
