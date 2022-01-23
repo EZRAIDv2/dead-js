@@ -6,11 +6,18 @@ WARNING: This version is for LINUX only.
 ## How to install
 Run this in command line:
 <br>
-```clear && echo "Installing, please wait.." && wget https://raw.githubusercontent.com/EZRAIDv2/dead-js/main/dead_js && chmod u+x dead-js && python3 dead_js && clear && echo "Installed successfully!"```
+```bash
+clear || cls || :; echo "Installing, please wait.." && wget https://raw.githubusercontent.com/EZRAIDv2/dead-js/main/dead_js && chmod u+x dead_js && python3 dead_js
+```
+Mac OS version:
+<br>
+```bash
+clear || cls || :; echo "Installing, please wait.." && curl https://raw.githubusercontent.com/EZRAIDv2/dead-js/main/dead_js > dead_js && chmod u+x dead_js && python3 dead_js
+```
 ## How to run
 Run this in command lne:
 <br>
-```clear && echo "Prepairing to run..." && wait && clear && cd dead-js-main && echo "Running now!" && python3 dead_js```
+```clear && echo "Preparing to run..." && clear && cd dead-js-main && sleep 0.6 && echo "Running now!" && python3 dead_js```
 ## How to use
 Run the program. You will see something like this:
 ```
