@@ -18,7 +18,7 @@ clear || cls || :; echo "Installing, please wait.." && curl https://raw.githubus
 Run this in command lne:
 <br>
 ```bash
-clear && echo "Preparing to run..." && clear && cd dead-js-main && sleep 0.6 && echo "Running now!" && python3 dead_js
+clear && echo "Preparing to run..." && clear && sleep 0.6 && echo "Running now!" && python3 dead-js
 ```
 ## How to use
 Run the program. You will see something like this:
